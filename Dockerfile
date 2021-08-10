@@ -6,7 +6,8 @@ LABEL "maintainer"="Ion Bazan <ion.bazan@gmail.com>"
 LABEL "description"="Compares composer.lock changes and generates Markdown report so you can use it in PR description."
 ENV COMPOSER_ALLOW_SUPERUSER 1
 ENV COMPOSER_HOME /tmp
-ENV COMPOSER_VERSION 2.1.5
+
+RUN cp /usr/local/bin/composer2 /usr/local/bin/composer
 
 RUN composer global require ion-bazan/composer-diff
 
