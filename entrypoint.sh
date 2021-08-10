@@ -11,4 +11,3 @@ OUTPUT="${OUTPUT//$'\n'/'%0A'}"
 OUTPUT="${OUTPUT//$'\r'/'%0D'}"
 
 echo "::set-output name=composer_diff::$OUTPUT"
-exit 0

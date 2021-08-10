@@ -1,4 +1,4 @@
-FROM composer
+FROM ghcr.io/qlicks/magento-php-7.3:latest
 
 LABEL "repository"="http://github.com/IonBazan/composer-diff"
 LABEL "homepage"="http://github.com/IonBazan"
