@@ -2,7 +2,7 @@
 
 set -e
 
-OUTPUT=$(composer2 diff $*)
+OUTPUT=$(composer diff $*)
 echo "$OUTPUT"
 
 OUTPUT=$(echo "$OUTPUT" | sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g')
