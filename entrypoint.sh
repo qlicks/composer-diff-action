@@ -2,7 +2,7 @@
 
 set -e
 
-OUTPUT=$(COMPOSER_MEMORY_LIMIT=-1 composer diff $*)
+OUTPUT=$(composer2 diff $*)
 echo "$OUTPUT"
 
 OUTPUT=$(echo "$OUTPUT" | sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g')
