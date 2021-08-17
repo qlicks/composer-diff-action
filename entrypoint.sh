@@ -13,8 +13,6 @@ OUTPUT="${OUTPUT//$'\n'/'\n'}"
 
 echo '{"body": "'"$OUTPUT"'"}' > /tmp/composer.diff
 
-cat /tmp/composer.diff
-
 PR_NUMBER=$(echo $CI_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
 
 curl -s -H "Authorization: token ${GITHUB_TOKEN} " -X POST -d @/tmp/composer.diff "${GITHUB_API_URL}/repos/${GITHUB_REPOSITORY_OWNER}/${CI_REPOSITORY_NAME}/issues/${PR_NUMBER}/comments"
