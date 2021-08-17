@@ -10,6 +10,8 @@ OUTPUT="${OUTPUT//'%'/'%25'}"
 OUTPUT="${OUTPUT//$'\n'/'%0A'}"
 OUTPUT="${OUTPUT//$'\r'/'%0D'}"
 
+printenv
+
 
 echo "::set-output name=composer_diff::$OUTPUT"
 echo $OUTPUT > composer.diff
