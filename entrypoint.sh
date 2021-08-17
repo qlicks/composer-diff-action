@@ -7,11 +7,11 @@ echo "$OUTPUT"
 
 OUTPUT=$(echo "$OUTPUT" | sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g')
 #OUTPUT="${OUTPUT//'%'/'%25'}"
-#OUTPUT="${OUTPUT//$'\n'/'%0A'}"
+OUTPUT="${OUTPUT//$'\n'/'\n'}"
 #OUTPUT="${OUTPUT//$'\r'/'%0D'}"
 
 
-echo '{"body": "'"$OUTPUT"'"}' > /tmp/composer.diff\
+echo '{"body": "'"$OUTPUT"'"}' > /tmp/composer.diff
 
 cat /tmp/composer.diff
 
