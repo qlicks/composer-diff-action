@@ -11,7 +11,7 @@ OUTPUT="${OUTPUT//$'\n'/'\n'}"
 #OUTPUT="${OUTPUT//$'\r'/'%0D'}"
 
 
-echo "$OUTPUT" > composer.diff
+echo "'$OUTPUT'" > composer.diff
 
 #PR_NUMBER=$(echo $CI_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
 
