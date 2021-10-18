@@ -11,7 +11,7 @@ OUTPUT=$(echo "$OUTPUT" | sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g')
 #OUTPUT="${OUTPUT//$'\r'/'%0D'}"
 
 
-echo "$OUTPUT" > composer.diff
+echo "$OUTPUT" > $GITHUB_WORKSPACE/composer.diff
 
 #PR_NUMBER=$(echo $CI_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
 
