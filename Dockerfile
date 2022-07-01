@@ -9,7 +9,8 @@ ENV COMPOSER_HOME /tmp
 
 RUN cp /usr/local/bin/composer2 /usr/local/bin/composer
 
-RUN composer global require ion-bazan/composer-diff
+RUN composer global config allow-plugins.ion-bazan/composer-diff true \
+    && composer global require ion-bazan/composer-diff
 
 COPY entrypoint.sh /entrypoint.sh
 
