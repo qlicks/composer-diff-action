@@ -5,6 +5,8 @@ set -e
 OUTPUT=$(composer diff $*)
 echo "$OUTPUT"
 
+echo "composer_diff_exit_code=$EXIT_CODE" >> $GITHUB_OUTPUT
+
 OUTPUT=$(echo "$OUTPUT" | sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g')
 #OUTPUT="${OUTPUT//'%'/'%25'}"
 #OUTPUT="${OUTPUT//$'\n'/'\n'}"
