@@ -17,5 +17,5 @@ echo "$OUTPUT" > $GITHUB_WORKSPACE/composer.diff
 
 #curl -s -H "Authorization: token ${GITHUB_TOKEN} " -X POST -d @/tmp/composer.diff "${GITHUB_API_URL}/repos/${GITHUB_REPOSITORY_OWNER}/${CI_REPOSITORY_NAME}/issues/${PR_NUMBER}/comments"
 
-#echo "::set-output name=composer_diff::$OUTPUT"
-echo "composer_diff=$OUTPUT" >> $GITHUB_OUTPUT
+echo "::set-output name=composer_diff::$OUTPUT"
+#echo "composer_diff=$OUTPUT" >> $GITHUB_OUTPUT
